@@ -6,6 +6,15 @@ public class TestSuit {
 	public static final double DELTA = 0.1;
 	
 	@Test
+	public void testPoint2DEqual() {
+		Point2D pointA = new Point2D(3,0);
+		Point2D pointB = new Point2D(0,0);
+		Point2D pointC = new Point2D(3,0);
+		assertEquals(false, pointA.equals(pointB));
+		assertEquals(true, pointA.equals(pointC));
+	}
+	
+	@Test
 	public void testLine2Dlength1() {
 		Line2D lineA = new Line2D(new Point2D(3,0), new Point2D(0,4));
 		assertEquals(5, lineA.getLength(), DELTA); //normal case
