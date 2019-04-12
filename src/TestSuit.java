@@ -33,6 +33,15 @@ public class TestSuit {
 	}
 	
 	@Test
+	public void testLine2DConnected() {
+		Line2D lineA = new Line2D(new Point2D(3,0), new Point2D(0,4));
+		Line2D lineB = new Line2D(new Point2D(3,3), new Point2D(3,3));
+		Line2D lineC = new Line2D(new Point2D(3,0), new Point2D(6,0));
+		assertEquals(false, lineA.isConnected(lineB));
+		assertEquals(true, lineA.isConnected(lineC));
+	}
+	
+	@Test
 	public void testRectangleCircumference() {
 		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
 		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));

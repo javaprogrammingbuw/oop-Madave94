@@ -1,7 +1,7 @@
 
 public class Triangle implements iForm{
 	
-	Line2D a,b,c;
+	private Line2D a,b,c;
 	
 	Triangle (Line2D a, Line2D b, Line2D c) {
 		this.a = a;
@@ -10,8 +10,8 @@ public class Triangle implements iForm{
 	}
 	
 	public boolean isValid() {
-		// TODO
-		return false;
+		boolean result = false;		
+		return result;
 	}
 
 	@Override
@@ -22,8 +22,7 @@ public class Triangle implements iForm{
 
 	@Override
 	public double circumference() {
-		// TODO Auto-generated method stub
-		return 0;
+		return a.getLength()+b.getLength()+c.getLength();
 	}
 	
 	
