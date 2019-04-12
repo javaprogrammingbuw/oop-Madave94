@@ -1,4 +1,3 @@
-
 public class Triangle implements iForm{
 	
 	private Line2D a,b,c;
@@ -17,8 +16,14 @@ public class Triangle implements iForm{
 
 	@Override
 	public double area() {
-		//TODO
-		return 0;
+		double upperLine = 0.5*Math.pow(a.getLength(), 2) 
+				- 0.5*Math.pow(b.getLength(), 2) 
+				+ 0.5*Math.pow(c.getLength(), 2);
+		double alpha = Math.acos(upperLine/(b.getLength()*c.getLength()));
+		double beta = Math.acos(upperLine/(a.getLength()*c.getLength()));
+		double gamma = -beta-alpha+Math.PI;
+		double h = b.getLength()*Math.sin(gamma);
+		return (0.5 * c.getLength() * h);
 	}
 
 	@Override

@@ -68,19 +68,19 @@ public class TestSuit {
 	
 	@Test
 	public void testTriangleCircumference() {
-		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(4,0));
-		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
-		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(4,0));
+		Line2D lineA = new Line2D(new Point2D(0,3), new Point2D(4,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(4,0));
+		Line2D lineC = new Line2D(new Point2D(0,0), new Point2D(0,3));
 		Triangle tria =  new Triangle(lineA, lineB, lineC);
 		assertEquals(12, tria.circumference(), DELTA);;
 	}
 	
 	@Test
 	public void testTriangleArea() {
-		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
-		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
-		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(3,0));
+		Line2D lineA = new Line2D(new Point2D(0,3), new Point2D(4,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(4,0));
+		Line2D lineC = new Line2D(new Point2D(0,0), new Point2D(0,3));
 		Triangle tria =  new Triangle(lineA, lineB, lineC);
-		assertEquals(3.9, tria.area(), DELTA);
+		assertEquals(6, tria.area(), DELTA);
 	}
 }
