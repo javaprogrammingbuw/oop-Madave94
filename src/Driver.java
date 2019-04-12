@@ -5,10 +5,9 @@ import org.junit.runner.notification.Failure;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// Refer to the TestSuit
-		// Optional place to implement further methods
-		// Junit 5 was used for the TestSuit
+		// Run this class
+		// or use the build.gradle
 		Result result = JUnitCore.runClasses(TestSuit.class);
 
 		for (Failure failure : result.getFailures()) {	         
