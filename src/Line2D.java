@@ -1,4 +1,3 @@
-
 public class Line2D {
 	private Point2D start, end;
 	
@@ -10,7 +9,7 @@ public class Line2D {
 	public double getLength() {
 		double xlength = start.getX()-end.getX();
 		double ylength = start.getY()-end.getY();
-		return java.lang.Math.sqrt(xlength*xlength+ylength*ylength);
+		return Math.sqrt(xlength*xlength+ylength*ylength);
 	}
 	
 	public boolean isConnected(Line2D other) {

@@ -1,4 +1,3 @@
-
 public class Point2D {
 	private double x, y;
 	
