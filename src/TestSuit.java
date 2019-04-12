@@ -22,5 +22,30 @@ public class TestSuit {
 		Line2D lineA = new Line2D(new Point2D(3,3), new Point2D(3,3));
 		assertEquals(0, lineA.getLength(), DELTA); //zero case
 	}
-
+	
+	@Test
+	public void testRectangleCircumference() {
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
+		Rectangle recA = new Rectangle(lineA, lineB);
+		assertEquals(12, recA.circumference(), DELTA);
+	}
+	
+	@Test
+	public void testRectangleArea() {
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
+		Rectangle recA = new Rectangle(lineA, lineB);
+		assertEquals(9, recA.area(), DELTA);
+	}
+	
+	@Test
+	public void testTriangleCircumference() {
+		// TODO Platzhalte/Reminder
+	}
+	
+	@Test
+	public void testTriangleArea() {
+		// TODO Platzhalte/Reminder
+	}
 }
