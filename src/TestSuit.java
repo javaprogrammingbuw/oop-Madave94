@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 public class TestSuit {
 	
-	public static final double DELTA = 0.0001;
+	public static final double DELTA = 0.1;
 	
 	@Test
 	public void testLine2Dlength1() {
@@ -40,12 +40,29 @@ public class TestSuit {
 	}
 	
 	@Test
+	public void testTriangleValidity() {
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
+		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(3,0));
+		Triangle tria =  new Triangle(lineA, lineB, lineC);
+		assertEquals(true, tria.isValid());
+	}
+	
+	@Test
 	public void testTriangleCircumference() {
-		// TODO Platzhalte/Reminder
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
+		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(3,0));
+		Triangle tria =  new Triangle(lineA, lineB, lineC);
+		assertEquals(9, tria.circumference(), DELTA);;
 	}
 	
 	@Test
 	public void testTriangleArea() {
-		// TODO Platzhalte/Reminder
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
+		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(3,0));
+		Triangle tria =  new Triangle(lineA, lineB, lineC);
+		assertEquals(3.9, tria.area(), DELTA);
 	}
 }
