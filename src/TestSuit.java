@@ -68,11 +68,11 @@ public class TestSuit {
 	
 	@Test
 	public void testTriangleCircumference() {
-		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(3,0));
+		Line2D lineA = new Line2D(new Point2D(0,0), new Point2D(4,0));
 		Line2D lineB = new Line2D(new Point2D(0,0), new Point2D(0,3));
-		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(3,0));
+		Line2D lineC = new Line2D(new Point2D(0,3), new Point2D(4,0));
 		Triangle tria =  new Triangle(lineA, lineB, lineC);
-		assertEquals(9, tria.circumference(), DELTA);;
+		assertEquals(12, tria.circumference(), DELTA);;
 	}
 	
 	@Test
