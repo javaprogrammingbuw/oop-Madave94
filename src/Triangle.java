@@ -10,13 +10,14 @@ public class Triangle implements iForm{
 	}
 	
 	public boolean isValid() {
-		boolean result = false;		
+		boolean result = false;	
+		if (a.isConnected(b) && a.isConnected(c) && b.isConnected(c)) result = true;
 		return result;
 	}
 
 	@Override
 	public double area() {
-		// TODO Auto-generated method stub
+		//TODO
 		return 0;
 	}
 
