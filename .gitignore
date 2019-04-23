@@ -2,7 +2,7 @@
 *
 
 #Whitlisting
-!.java
+!*.java
 !.gitignore
 !build.gradle
 !.pdf
